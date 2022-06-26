@@ -13,7 +13,7 @@ public class Main {
     public static void main(String args[]) throws IOException {
         Vector<UniData> myUni = new Vector<UniData>();
         System.out.println("Program start!");
-        System.out.println("Program terminate properly!");
+       
         
         // Parsing a CSV file into Scanner class constructor  
         Scanner sc = new Scanner(new File("C:\\Users\\Pree\\SE212\\QS-World-University-Rankings-2017.csv"));  
@@ -29,6 +29,11 @@ public class Main {
         
         // Line 14"Nanyang Technological University, Singapore (NTU) Exception in thread "main" java.util.InputMismatchException
         sc.close();  //closes the scanner  
-      
+
+        // let insert new instance
+        UniData newUni = new UniData();
+        newUni.setCity("Chiang Mai");
+        myUni.add(newUni);
+        System.out.println("Program terminate properly!");
     } // end main
 }// end class Main
