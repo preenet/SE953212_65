@@ -1,10 +1,11 @@
+package Lab2;
 /**
- * Lab 1 Solution
- * @author pree.t
+ * Your Lab2 solution
+ * @Author pree.t@cmu.ac.th
  */
-public class UniData {
+public class UniData implements Comparable <UniData> {
     
-    String year, score, uniName, link, city, country, logo, rank;
+    private String year, score, uniName, link, city, country, logo, rank;
 
     public UniData() {
 
@@ -38,6 +39,7 @@ public class UniData {
     }
 
     public String getRank() {
+        //return Integer.parseInt( this.rank );
         return this.rank;
     }
 
@@ -90,4 +92,10 @@ public class UniData {
         + this.link + ", " + this.country + ", " + this.city + ", " + this.logo + "]";
 
     }// override method toString
+
+    public int compareTo( UniData o) {
+        if(Double.parseDouble(this.getScore()) > Double.parseDouble(o.getScore()))
+            return 1;
+        return -1;
+    }// end override method compareTo
 }// end class UniData

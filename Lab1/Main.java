@@ -1,3 +1,4 @@
+package Lab1;
 /**
  * Your Lab1 solution
  * @Author pree.t
